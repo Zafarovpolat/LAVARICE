@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ico/favicon-16x16.png">
     <link rel="manifest" href="./assets/ico/site.webmanifest">
-    <!-- <link rel="stylesheet" href="./assets/style/style.css"> -->
-    <link rel="stylesheet" href="./assets/style/min.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <!-- <link rel="stylesheet" href="./assets/style/min.css"> -->
     <title>LAVARICE</title>
 </head>
 
@@ -17,10 +17,10 @@
 
     <header>
         <div class="container header__container">
-            <button id="headerMenuBtn" class="btn"><img src="./assets/icons/menu.svg" alt=""></button>
+            <button class="btn header__menu-open"><img src="./assets/icons/menu.svg" alt=""></button>
             <div class="header__menu">
                 <div class="header__menu-btns">
-                    <button id="headerMenuBtnClose" class="btn"><img src="./assets/icons/close.svg" alt=""></button>
+                    <button class="btn header__menu-close"><img src="./assets/icons/close.svg" alt=""></button>
                 </div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
@@ -67,15 +67,66 @@
                     </ul>
                 </nav>
             </div>
+            <div class="header__menu-bcg"></div>
             <a href="./index.html" class="header__logo"><img src="./assets/img/logo.svg" alt=""></a>
-            <a id="headerCartBtn" class="btn"><img src="./assets/icons/shopping-cart.svg" alt=""></a>
+            <a id="headerCartBtn" class="btn"><img src="./assets/icons/shopping-cart.svg" alt="">
+                <span id="headerCartBadge"></span>
+            </a>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container hero__container">
+        <section class="order">
+            <div class="container order__container">
+                <h2 class="heading order__heading">Подарочный сертификат</h2>
+                <div class="order__content">
+                    <div class="order__left">
+                        <h4 class="title order__title">Выберите дизайн</h4>
+                        <div class="order__img-main"><img src="./assets/img/order1.jpg" alt=""></div>
+                        <ul class="order__img-list">
+                            <li class="order__img-item active"><img src="./assets/img/order1.jpg" alt=""></li>
+                            <li class="order__img-item"><img src="./assets/img/order2.jpg" alt=""></li>
+                            <li class="order__img-item"><img src="./assets/img/order3.jpg" alt=""></li>
+                            <li class="order__img-item"><img src="./assets/img/order4.jpg" alt=""></li>
+                        </ul>
+                    </div>
 
+                    <form class="order__right" method="#">
+                        <div class="order__box">
+                            <h4 class="title order__title">Выберите номинал</h4>
+                            <ul class="order__sum-list">
+                                <li class="order__sum-item"><input id="sum1" type="radio" name="sum" value="5000"
+                                        checked>
+                                    <label for="sum1" class="checkbox">5000 ₽</label>
+                                </li>
+                                <li class="order__sum-item"><input id="sum2" type="radio" name="sum" value="10000">
+                                    <label for="sum2" class="checkbox">10000 ₽</label>
+                                </li>
+                                <li class="order__sum-item"><input id="sum3" type="radio" name="sum" value="15000">
+                                    <label for="sum3" class="checkbox">15000 ₽</label>
+                                </li>
+                                <li class="order__sum-item">
+                                    <input id="sum4" type="radio" name="sum">
+                                    <input class="input order__sum-other" type="number" placeholder="Другая сумма">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="order__box">
+                            <h4 class="title order__title">Кому</h4>
+                            <ul class="order__receiver-list">
+                                <li class="order__receiver-item">
+                                    <input id="receiver1" type="radio" name="receiver" value="Себе" checked>
+                                    <label for="receiver1" class="checkbox">Себе</label>
+                                </li>
+                                <li class="order__receiver-item">
+                                    <input id="receiver2" type="radio" name="receiver" value="В подарок">
+                                    <label for="receiver2" class="checkbox">В подарок</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -86,8 +137,8 @@
         </div>
     </footer>
 
-    <!-- <script src="./assets/js/script.js"></script> -->
-    <script src="./assets/js/min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- <script src="./assets/js/min.js"></script> -->
 </body>
 
 </html>

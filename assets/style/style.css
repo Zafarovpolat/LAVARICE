@@ -50,6 +50,8 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    user-select: none;
 }
 
 :root {
@@ -63,6 +65,7 @@
     --white: #FFFFFF;
     --green: #0DA155;
     --red: #ED0000;
+    --rounded: 8px;
 }
 
 a {
@@ -87,12 +90,82 @@ img {
     vertical-align: middle;
 }
 
-.btn {
-    cursor: pointer;
+input {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 .container {
     margin: 0 auto;
+}
+
+.btn,
+a {
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--dark-grey);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--dark-grey);
+}
+
+.checkbox {
+    border: 1px solid var(--input-field);
+    cursor: pointer;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: all 300ms;
+    border-radius: var(--rounded);
+}
+
+.checkbox:hover {
+    border: 1px solid var(--dark-grey);
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid var(--input-field);
+    cursor: pointer;
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: all 300ms;
+    color: var(--dark-grey);
+}
+
+.input:focus {
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.input:hover {
+    border-bottom: 1px solid var(--dark-grey);
 }
 
 .header__container {
@@ -127,6 +200,11 @@ header .btn {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    transition: all 300ms;
+}
+
+header .btn:hover {
+    opacity: 0.8;
 }
 
 .header__menu {
@@ -148,7 +226,6 @@ header .btn {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    font-family: 'PP Neue Montreal Book', sans-serif;
     gap: 25px;
     -webkit-transition: all 500ms;
     -o-transition: all 500ms;
@@ -161,9 +238,19 @@ header .btn {
     opacity: 1;
 }
 
-#headerMenuBtnClose {
+.header__menu-close {
     padding-left: 6px;
     max-width: 22px;
+}
+
+.header__menu-bcg {
+    position: fixed;
+    background-color: transparent;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 
 .header__nav {
@@ -195,6 +282,8 @@ header .btn {
     -webkit-transition: all 300ms;
     -o-transition: all 300ms;
     transition: all 300ms;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .header__nav-item:hover {
@@ -206,13 +295,97 @@ header .btn {
     padding: 3px 6px;
     color: var(--dark-grey);
     font-weight: 400;
-    border-radius: 4px;
-    overflow: hidden;
     line-height: 21px;
 }
 
 .header__nav-list:last-child .header__nav-link {
     padding: 6px 6px;
+}
+
+.order {
+    padding: 70px 0;
+    margin-bottom: 50px;
+}
+
+.order__container {
+    max-width: 1200px;
+}
+
+.order__heading {
+    margin-bottom: 50px;
+}
+
+.order__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+}
+
+.order__title {
+    margin-bottom: 16px;
+}
+
+.order__img-main {
+    border-radius: var(--rounded);
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.order__img-main>img {
+    max-height: 366px;
+}
+
+.order__img-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.order__img-item {
+    border-radius: var(--rounded);
+    overflow: hidden;
+    opacity: 0.5;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.order__img-item.active {
+    opacity: 1;
+    cursor: default;
+}
+
+.order__img-item:hover {
+    opacity: 1;
+}
+
+.order__box {
+    margin-bottom: 40px;
+}
+
+.order__sum-list {
+    display: grid;
+    grid-template-columns: 6fr 6fr 6fr 8fr;
+    gap: 16px;
+}
+
+.order__box input[type='radio'] {
+    display: none;
+    width: 100%;
+}
+
+.order__box input:checked~label {
+    border: 1px solid var(--dark-grey);
+}
+
+.order__sum-item>input[type="number"] {
+    display: flex;
+    text-align: center;
+}
+
+.order__receiver-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 @media (max-width: 768px) {
