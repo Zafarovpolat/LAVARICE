@@ -1,55 +1,62 @@
+.btn,
+button {
+    cursor: pointer
+}
+
+.header__container,
+.header__menu,
+header .btn {
+    display: -webkit-box;
+    display: -ms-flexbox
+}
+
 @font-face {
     font-family: 'PP Neue Montreal Book';
     font-style: normal;
-    font-weight: normal;
-    src: local('PP Neue Montreal Book'), url('../fonts/ppneuemontreal-book.woff') format('woff');
+    font-weight: 400;
+    src: local('PP Neue Montreal Book'), url('../fonts/ppneuemontreal-book.woff') format('woff')
 }
-
 
 @font-face {
     font-family: 'PP Neue Montreal Italic';
     font-style: normal;
-    font-weight: normal;
-    src: local('PP Neue Montreal Italic'), url('../fonts/ppneuemontreal-italic.woff') format('woff');
+    font-weight: 400;
+    src: local('PP Neue Montreal Italic'), url('../fonts/ppneuemontreal-italic.woff') format('woff')
 }
-
 
 @font-face {
     font-family: 'PP Neue Montreal Thin';
     font-style: normal;
-    font-weight: normal;
-    src: local('PP Neue Montreal Thin'), url('../fonts/ppneuemontreal-thin.woff') format('woff');
+    font-weight: 400;
+    src: local('PP Neue Montreal Thin'), url('../fonts/ppneuemontreal-thin.woff') format('woff')
 }
-
 
 @font-face {
     font-family: 'PP Neue Montreal Medium';
     font-style: normal;
-    font-weight: normal;
-    src: local('PP Neue Montreal Medium'), url('../fonts/ppneuemontreal-medium.woff') format('woff');
+    font-weight: 400;
+    src: local('PP Neue Montreal Medium'), url('../fonts/ppneuemontreal-medium.woff') format('woff')
 }
-
 
 @font-face {
     font-family: 'PP Neue Montreal SemiBold italic';
     font-style: normal;
-    font-weight: normal;
-    src: local('PP Neue Montreal SemiBold italic'), url('../fonts/ppneuemontreal-semibolditalic.woff') format('woff');
+    font-weight: 400;
+    src: local('PP Neue Montreal SemiBold italic'), url('../fonts/ppneuemontreal-semibolditalic.woff') format('woff')
 }
-
 
 @font-face {
     font-family: 'PP Neue Montreal Bold';
     font-style: normal;
-    font-weight: normal;
-    src: local('PP Neue Montreal Bold'), url('ppneuemontreal-bold.woff') format('woff');
+    font-weight: 400;
+    src: local('PP Neue Montreal Bold'), url('ppneuemontreal-bold.woff') format('woff')
 }
 
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 :root {
@@ -62,71 +69,62 @@
     --grey-bg: #F7F7F7;
     --white: #FFFFFF;
     --green: #0DA155;
-    --red: #ED0000;
+    --red: #ED0000
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: inherit
 }
 
 button {
     border: none;
-    outline: none;
-    cursor: pointer;
+    outline: 0
 }
 
-ul,
-ol {
-    list-style-type: none;
+ol,
+ul {
+    list-style-type: none
 }
 
 img {
     width: 100%;
     height: 100%;
-    vertical-align: middle;
-}
-
-.btn {
-    cursor: pointer;
+    vertical-align: middle
 }
 
 .container {
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .header__container {
     max-width: 1920px;
     width: 100%;
     padding: 10px 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .header__logo>img {
-    max-width: 150px;
+    max-width: 150px
 }
 
 header .btn {
     background-color: transparent;
     max-width: 20px;
     max-height: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .header__menu {
@@ -134,15 +132,12 @@ header .btn {
     left: 0;
     bottom: 0;
     top: 0;
-    max-width: 332px;
     width: 100%;
     translate: -100%;
     padding: 16px 48px 32px 34px;
-    background-color: white;
+    background-color: #fff;
     gap: 0;
     max-width: 380px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -150,55 +145,55 @@ header .btn {
     flex-direction: column;
     font-family: 'PP Neue Montreal Book', sans-serif;
     gap: 25px;
-    -webkit-transition: all 500ms;
-    -o-transition: all 500ms;
-    transition: all 500ms;
-    opacity: 0.9;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    opacity: .9
+}
+
+.header__nav,
+.header__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal
 }
 
 .header__menu.visible {
     translate: 0%;
-    opacity: 1;
+    opacity: 1
 }
 
 #headerMenuBtnClose {
     padding-left: 6px;
-    max-width: 22px;
+    max-width: 22px
 }
 
 .header__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 2.5vh;
+    gap: 2.5vh
 }
 
 .header__nav-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 2px;
+    gap: 2px
 }
 
 .header__nav-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-transition: all 300ms;
-    -o-transition: all 300ms;
-    transition: all 300ms;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
 }
 
 .header__nav-item:hover {
-    background-color: var(--grey-bg);
+    background-color: var(--grey-bg)
 }
 
 .header__nav-link {
@@ -208,32 +203,32 @@ header .btn {
     font-weight: 400;
     border-radius: 4px;
     overflow: hidden;
-    line-height: 21px;
+    line-height: 21px
 }
 
 .header__nav-list:last-child .header__nav-link {
-    padding: 6px 6px;
+    padding: 6px
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .header__container {
-        padding: 20px 15px;
+        padding: 20px 15px
     }
 
     header .btn {
         max-width: 18px;
-        max-height: 18px;
+        max-height: 18px
     }
 
     .header__menu {
         max-width: 100%;
         padding: 26px 48px 32px 12px;
-        gap: 13px;
+        gap: 13px
     }
 
     .header__nav-link {
         padding: 5px;
-        line-height: 28px;
+        line-height: 28px
     }
 
     .header__nav-list {
@@ -244,15 +239,14 @@ header .btn {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        gap: 1px;
+        gap: 1px
     }
 
     .header__nav {
-        gap: 0;
+        gap: 0
     }
 
     .header__nav-list:last-child .header__nav-link {
-        padding: 5px;
+        padding: 5px
     }
-
 }

@@ -1,0 +1,1 @@
+let headerMenuBtn = document.querySelector("#headerMenuBtn"), headerMenuClose = document.querySelector("#headerMenuBtnClose"), headerMenu = document.querySelector(".header__menu"); headerMenuBtn.addEventListener("click", () => { headerMenu.classList.add("visible") }), headerMenuBtnClose.addEventListener("click", () => { headerMenu.classList.remove("visible") });
