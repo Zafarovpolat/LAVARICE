@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'PP Neue Montreal Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PP Neue Montreal Book'), url('../fonts/ppneuemontreal-book.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PP Neue Montreal Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PP Neue Montreal Italic'), url('../fonts/ppneuemontreal-italic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PP Neue Montreal Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PP Neue Montreal Thin'), url('../fonts/ppneuemontreal-thin.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PP Neue Montreal Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PP Neue Montreal Medium'), url('../fonts/ppneuemontreal-medium.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PP Neue Montreal SemiBold italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PP Neue Montreal SemiBold italic'), url('../fonts/ppneuemontreal-semibolditalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PP Neue Montreal Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PP Neue Montreal Bold'), url('ppneuemontreal-bold.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #120A03;
+    --dark-grey: #393D3F;
+    --text-light: #76767A;
+    --line-dark: #AEAFB4;
+    --input-field: #DCDCDC;
+    --line-light: #E9E9E9;
+    --grey-bg: #F7F7F7;
+    --white: #FFFFFF;
+    --green: #0DA155;
+    --red: #ED0000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.header__container {
+    max-width: 1920px;
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo>img {
+    max-width: 150px;
+}
+
+header .btn {
+    background-color: transparent;
+    max-width: 20px;
+    max-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    max-width: 332px;
+    width: 100%;
+    translate: -100%;
+    padding: 16px 48px 32px 34px;
+    background-color: white;
+    gap: 0;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    gap: 25px;
+    transition: all 500ms;
+    opacity: 0.9;
+}
+
+.header__menu.visible {
+    translate: 0%;
+    opacity: 1;
+}
+
+#headerMenuBtnClose {
+    padding-left: 6px;
+    max-width: 22px;
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.header__nav-item {
+    display: flex;
+    transition: all 300ms;
+}
+
+.header__nav-item:hover {
+    background-color: var(--grey-bg);
+}
+
+.header__nav-link {
+    width: 100%;
+    padding: 3px 6px;
+    color: var(--dark-grey);
+    font-weight: 400;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 21px;
+}
+
+.header__nav-list:last-child .header__nav-link {
+    padding: 6px 6px;
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        padding: 20px 15px;
+    }
+
+    header .btn {
+        max-width: 18px;
+        max-height: 18px;
+    }
+
+    .header__menu {
+        max-width: 100%;
+        padding: 26px 48px 32px 12px;
+        gap: 13px;
+    }
+
+    .header__nav-link {
+        padding: 5px;
+        line-height: 28px;
+    }
+
+    .header__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .header__nav {
+        gap: 0;
+    }
+
+    .header__nav-list:last-child .header__nav-link {
+        padding: 5px;
+    }
+
+}
