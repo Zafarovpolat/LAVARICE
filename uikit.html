@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="./assets/ico/site.webmanifest">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/uikit.css">
+    <!-- <link rel="stylesheet" href="./assets/style/min.css"> -->
+    <title>LAVARICE</title>
+</head>
+
+<body>
+
+    <section class="order">
+        <div class="container order__container">
+
+            <h1 class="heading order__heading">UIKIT</h1>
+
+            <div>
+                <h2 class="title order__title">Input</h2>
+                <div class="inputs">
+                    <div class="input-box">
+                        <label for="inpText" class="subtitle">Название поля<span>*</span></label>
+                        <input id="inpText" class="input2" type="text" placeholder="Введите название">
+                    </div>
+                    <div class="input-box wrong">
+                        <label for="inpText2" class="subtitle">Название поля<span>*</span></label>
+                        <input id="inpText2" class="input2" type="text" placeholder="Введите название">
+                        <p6 class="input-error">Текст ошибки</p6>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title order__title">Checkbox</h2>
+                <div class="checkboxs order__box">
+                    <div>
+                        <input id="sum1" type="radio" name="sum" value="5000" checked>
+                        <label for="sum1" class="checkbox">5 000 ₽</label>
+                    </div>
+
+                    <div>
+                        <input id="sum2" type="radio" name="sum" value="10000">
+                        <label for="sum2" class="checkbox">10 000 ₽</label>
+                    </div>
+
+                    <div>
+                        <input id="sum3" type="radio" name="sum" value="15000">
+                        <label for="sum3" class="checkbox">15 000 ₽</label>
+                    </div>
+
+                    <div>
+                        <input id="sum4" type="radio" name="sum" value="20000">
+                        <label for="sum4" class="checkbox">20 000 ₽</label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title order__title">Button</h2>
+                <div class="btns order__box">
+                    <button class="btn btn2">Клик</button>
+                    <button class="btn btn3">Клик</button>
+                    <button class="btn btn3" disabled>Клик</button>
+                    <button class="btn btn4">
+                        <img src="./assets/icons/plus.svg" alt="">
+                        Клик
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title order__title">Alert</h2>
+                <div class="alerts order__box">
+                    <div class="alert-box">
+                        <button id="alert1Btn" class="btn alert-btn btn4">Сообщение 1</button>
+                        <div class="alert-wrapper alert-wrapper1">
+                            <div class="alert alert1">
+                                <button class="alert-close"><img src="./assets/icons/close.svg" alt=""></button>
+                                <h2 class="alert-title title">Заголовок сообщения</h2>
+                                <p class="alert-text">При покупке выберите дизайн, сумму и время отправки сертификата.
+                                    Вы можете
+                                    добавить
+                                    поздравление или отправить подарок анонимно.</p>
+                                <div class="alert-btns">
+                                    <button class="alert-cancel btn5 btn">Отменить</button>
+                                    <button class="alert-confirm btn3 btn">Подтвердить</button>
+                                </div>
+                            </div>
+                            <div class="alert-bcg"></div>
+                        </div>
+                    </div>
+                    <div class="alert-box">
+                        <button class="btn alert-btn btn4" id="alert2Btn">Сообщение 2</button>
+                        <div class="alert-wrapper alert-wrapper2">
+                            <div class="alert alert2">
+                                <button class="alert-close"><img src="./assets/icons/close.svg" alt=""></button>
+                                <h2 class="alert-title title">Заголовок сообщения</h2>
+                                <p class="alert-text">При покупке выберите дизайн, сумму и время отправки сертификата.
+                                    Вы можете
+                                    добавить
+                                    поздравление или отправить подарок анонимно.</p>
+                                <div class="alert-btns">
+                                    <button class="alert-confirm btn3 btn">Подтвердить</button>
+                                </div>
+                            </div>
+                            <div class="alert-bcg"></div>
+                        </div>
+                    </div>
+                    <div class="alert-box">
+                        <button id="alert3Btn" class="btn alert-btn btn4">Сообщение 3</button>
+                        <div class="alert-wrapper alert-wrapper3">
+                            <div class="alert alert3">
+                                <h2 class="alert-title title">Заголовок сообщения</h2>
+                                <div class="alert-btns">
+                                    <button class="alert-confirm btn btn3">Понятно</button>
+                                </div>
+                            </div>
+                            <div class="alert-bcg"></div>
+                        </div>
+                    </div>
+                    <div class="alert-box">
+                        <button id="alert4Btn" class="btn alert-btn btn4">Сообщение особое</button>
+                        <div class="alert alert4">
+                            <p class="alert-text">Тестовое сообщение</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/alert.js"></script>
+    <!-- <script src="./assets/js/min.js"></script> -->
+</body>
+
+</html>
